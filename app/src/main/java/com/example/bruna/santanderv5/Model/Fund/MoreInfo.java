@@ -11,7 +11,7 @@ public class MoreInfo {
     @JsonProperty("year")
     private Year year;
 
-    @JsonProperty("twelveMonths")
+    @JsonProperty("12months")
     private TwelveMonths twelveMonths;
 
     //Getters and Setters

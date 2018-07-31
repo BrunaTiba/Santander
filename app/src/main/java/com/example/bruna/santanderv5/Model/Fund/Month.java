@@ -9,7 +9,7 @@ public class Month {
     private double fund;
 
     @JsonProperty("CDI")
-    private double CDI;
+    private double cdi;
 
     //Getters and Setters
     public double getFund() {

@@ -1,6 +1,6 @@
 package com.example.bruna.santanderv5.Utils;
 
-public interface iRetrofitConfigFund {
+public interface IRetrofitConfigFund {
 
 //    @GET("https://floating-mountain-50292.herokuapp.com/fund.json")
 //    Call<Screen> getScreen(@Path("fund") String screen);

@@ -18,81 +18,80 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Config {
+//public class Config {
 
-   private Context mContext;
-   private ArrayList<Info> infos;
-  private RecyclerView.Adapter adapter;
-   private RecyclerView recyclerView;
+//   private Context mContext;
+ //  private ArrayList<Info> infos;
+ // private RecyclerView.Adapter adapter;
+  // private RecyclerView recyclerView;
 
-   public Config(Context context) {
-        this.mContext = context;
+ //  public Config(Context context) {
+ //       this.mContext = context;
 
-   }
-
-   public static final String URL_CELLS = "https://floating-mountain-50292.herokuapp.com/cells.json";
-    public static final String URL_FUND = "https://floating-mountain-50292.herokuapp.com/fund.json";
-
-
-   public void ToRquestFund() {
+//   }
+//
+//   public static final String URL_CELLS = "https://floating-mountain-50292.herokuapp.com/cells.json";
+//    public static final String URL_FUND = "https://floating-mountain-50292.herokuapp.com/fund.json";
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_FUND,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        ProgressDialog progressDialog = new ProgressDialog(mContext);
-                        progressDialog.dismiss();
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            JSONObject array = jsonObject.getJSONObject("screen");
+//   public void ToRquestFund() {
 
-                           // for (int i = 0; i<array.length(); i++) {
-                                //JSONObject object = array.getJSONObject();
-                            //    Info info = new Info(
+
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_FUND,
+  //              new Response.Listener<String>() {
+    //                @Override
+      //              public void onResponse(String response) {
+        //                ProgressDialog progressDialog = new ProgressDialog(mContext);
+          //              progressDialog.dismiss();
+  //                      try {
+  //                          JSONObject jsonObject = new JSONObject(response);
+  //                          JSONObject array = jsonObject.getJSONObject("screen");
+//
+                          // for (int i = 0; i<array.length(); i++) {
+//                                //JSONObject object = array.getJSONObject();     //    Info info = new Info(
                             //            object.getString("name"),
                           //              object.getString("data")
                          //       );
                          //       infos.add(info);
                           //  }
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+ //                       } catch (JSONException e) {
+//                            e.printStackTrace();
+//                       }
+//
+//                    }
+ //               },
+  //              new Response.ErrorListener() {
+  //                  @Override
+ //                   public void onErrorResponse(VolleyError error) {
+  //                      ProgressDialog progressDialog = new ProgressDialog(mContext);
+//                        progressDialog.dismiss();
+//                        Toast.makeText(mContext, error.getMessage(), Toast.LENGTH_LONG).show();
+//                    }
+ //               });
 
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        ProgressDialog progressDialog = new ProgressDialog(mContext);
-                        progressDialog.dismiss();
-                        Toast.makeText(mContext, error.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
+ //       RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+ //       requestQueue.add(stringRequest);
+ //   }
 
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        requestQueue.add(stringRequest);
-    }
+ //   public void ToRequestCells() {
 
-    public void ToRequestCells() {
+ //       StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_CELLS,
+ //               new Response.Listener<String>() {
+ //                   @Override
+  //                  public void onResponse(String response) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_CELLS,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
+ //                   }
+  //              },
+ //               new Response.ErrorListener() {
+ //                  @Override
+  //                  public void onErrorResponse(VolleyError error) {
 
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
+ //                   }
+  //              });
 
-                    }
-                });
+ //       RequestQueue requestQueue = Volley.newRequestQueue(mContext);
+ //       requestQueue.add(stringRequest);
+ //   }
 
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        requestQueue.add(stringRequest);
-    }
-
-}
+//}
