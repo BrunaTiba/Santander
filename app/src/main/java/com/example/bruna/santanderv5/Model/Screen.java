@@ -1,43 +1,39 @@
 package com.example.bruna.santanderv5.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Screen {
 
-    //Json Propertys
-    @JsonProperty("title")
-    private String title;
 
-    @JsonProperty("fundName")
+    private  String title;
     private String fundName;
-
-    @JsonProperty("whatIs")
+    @SerializedName("whatIs")
     private String whatIs;
-
-    @JsonProperty("definition")
+    @SerializedName("risk")
+    private Risk risk;
     private String definition;
-
-    @JsonProperty("riskTitle")
-    private String riskTitle;
-
-    @JsonProperty("risk")
-    private int risk;
-
-    @JsonProperty("infoTitle")
-    private String infoTitle;
-
-    @JsonProperty("moreInfo")
     private MoreInfo moreInfo;
+    private List<Info> info;
+    private String riskTitle;
+    private String infoTitle;
+    private String fund;
 
-    @JsonProperty("info")
-    private ArrayList<Info> infos = new ArrayList<Info>();
 
-    @JsonProperty("downInfo")
-    private ArrayList<DownInfo> downInfos = new ArrayList<DownInfo>();
 
-    //Getters and Setters
+        public String getFund() {
+        return fund;
+    }
+
+    public void setFund(String fund) {
+        this.fund = fund;
+    }
+
+
+
     public String getTitle() {
         return title;
     }
@@ -62,36 +58,20 @@ public class Screen {
         this.whatIs = whatIs;
     }
 
+    public Risk getRisk() {
+        return risk;
+    }
+
+    public void setRisk(Risk risk) {
+        this.risk = risk;
+    }
+
     public String getDefinition() {
         return definition;
     }
 
     public void setDefinition(String definition) {
         this.definition = definition;
-    }
-
-    public String getRiskTitle() {
-        return riskTitle;
-    }
-
-    public void setRiskTitle(String riskTitle) {
-        this.riskTitle = riskTitle;
-    }
-
-    public int getRisk() {
-        return risk;
-    }
-
-    public void setRisk(int risk) {
-        this.risk = risk;
-    }
-
-    public String getInfoTitle() {
-        return infoTitle;
-    }
-
-    public void setInfoTitle(String infoTitle) {
-        this.infoTitle = infoTitle;
     }
 
     public MoreInfo getMoreInfo() {
@@ -102,19 +82,31 @@ public class Screen {
         this.moreInfo = moreInfo;
     }
 
-    public ArrayList<Info> getInfos() {
-        return infos;
+    public List<Info> getInfo() {
+        return info;
     }
 
-    public void setInfos(ArrayList<Info> infos) {
-        this.infos = infos;
+    public void setInfo(List<Info> info) {
+        this.info = info;
     }
 
-    public ArrayList<DownInfo> getDownInfos() {
-        return downInfos;
+    public String getRiskTitle() {
+        return riskTitle;
     }
 
-    public void setDownInfos(ArrayList<DownInfo> downInfos) {
-        this.downInfos = downInfos;
+    public void setRiskTitle(String riskTitle) {
+        this.riskTitle = riskTitle;
     }
+
+    public String getInfoTitle() {
+        return infoTitle;
+    }
+
+    public void setInfoTitle(String infoTitle) {
+        this.infoTitle = infoTitle;
+    }
+
+
+
+
 }
