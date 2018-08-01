@@ -1,4 +1,4 @@
-package com.example.bruna.santanderv5.Utils;
+package com.example.bruna.santanderv5.Config;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,20 +7,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.bruna.santanderv5.Model.Fund.Info;
+import com.example.bruna.santanderv5.Model.Info;
 import com.example.bruna.santanderv5.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    private ArrayList<Info> infos;
+    private List<Info> infos;
     private Context context;
-
 
     public MyAdapter(ArrayList<Info> infos, Context context) {
         this.infos = infos;
         this.context = context;
+
+
     }
 
 
@@ -28,6 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fund_items, parent, false);
+
         return new ViewHolder(view);
     }
 

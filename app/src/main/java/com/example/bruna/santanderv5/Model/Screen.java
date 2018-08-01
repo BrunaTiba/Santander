@@ -1,4 +1,4 @@
-package com.example.bruna.santanderv5.Model.Fund;
+package com.example.bruna.santanderv5.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

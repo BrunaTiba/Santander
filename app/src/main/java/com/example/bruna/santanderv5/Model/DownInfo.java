@@ -1,18 +1,17 @@
-package com.example.bruna.santanderv5.Model.Fund;
+package com.example.bruna.santanderv5.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Info {
+public class DownInfo {
 
     //Json Propertys
     @JsonProperty("name")
-    public String name;
+    private String name;
 
     @JsonProperty("data")
-    public String data;
+    private String data;
 
-
-    public Info(String name, String data) {
+    public DownInfo(String name, String data) {
         this.name = name;
         this.data = data;
     }
