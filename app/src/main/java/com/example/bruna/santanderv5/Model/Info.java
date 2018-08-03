@@ -1,14 +1,9 @@
 package com.example.bruna.santanderv5.Model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Info {
 
-    //Json Propertys
-    @JsonProperty("name")
     public String name;
-
-    @JsonProperty("data")
     public String data;
 
 

@@ -9,7 +9,7 @@ public class Month {
     @SerializedName("CDI")
     private String cdi;
 
-    public String getFund() {
+    public String getFund(Class<java.time.Month> monthClass) {
         return fund;
     }
 
